@@ -8,6 +8,7 @@ all: ${OUT}
 
 ${DIR_OUT}/%.txt : Makefile ${DIR_SRC}/%.scm | ${DIR_OUT}
 	-mit-scheme --quiet < $(filter %.scm,$^) > $@ 2>&1
+#	-mit-scheme --quiet < $(filter %.scm,$^)
 	@cat $@
 
 ${DIR_OUT} :
